@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>sanghmps03007_Assignment</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    		<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+    		<link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+    		<link rel="stylesheet" href="css/main.css">
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    		<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+    	</head>
+    	<body style="display: none;">
+	<div data-role="page" id="page">
+		<div data-role="content" style="padding: 15px">
+			<!--application UI goes here-->
+			<img src="images/logo.png">
+			<a href="#page0" data-role="button" data-theme="b">Đăng Nhập</a>
+			<ul data-role="listview" id="itemsListUS" data-inset="true">
+				<h1>Điện Thoại Mới</h1>
+
+			</ul>
+		</div>
+	</div>
+	<div data-role="page" id="addMobileAd">
+		<div data-role="content">
+				<a href="#Admin" data-role="button" id="back" data-theme="b">Back</a>
+		<p id="tieude">Thêm Sản Phẩm</p>
+			<input type="text" id="txtMaSP" placeholder="Nhập Mã Sản Phẩm">
+			<p>Chọn ảnh</p>
+			<input id="txtImages" type=file accept="image/*" placeholder="Chọn ảnh">
+			<div id="preview" ></div>
+			<select id="txtidLoai">
+			<option>Chọn Loại</option>
+					<option>Mới</option>
+					<option>Cũ</option>
+			</select>
+			<input type="text" id="txtTenSP" placeholder="Nhập Tên Sản Phẩm">
+			<input type="text" id="txtNhaSX" placeholder="Nhập Tên Nhà Sản Xuất">
+			<input type="text" id="txtGia" placeholder="Nhập Giá">
+			
+			
+		<a href="#" data-role="button" onclick="addMobile()" style="background-color: #3399FF; color: navy">Thêm</a>
+		<a href="#Admin" data-role="button" id="button2" style="background-color: #FFCC33; color: maroon">Hủy</a>
+		
+		</div>
+	</div>
+	
+	<div data-role="page" id="page0">
+		<div data-role="content">
+		<!-- noi dung trang--->
+		<a href="#page" data-role="button" data-theme="b">Trang Chủ</a>
+			<input type="text" id="txtUser" placeholder="Nhập username">
+		<input type="password" id="txtPass" placeholder="Nhập password">
+		<button type="button" id="btn-login" style="background-color: #3399FF; font-weight: bold">Login</button>
+		<p style="text-align: center;">Nếu bạn chưa có tài khoảng vui lòng <a href="#Dangky">đăng ký</a></p>
+		<p>user: admin</p>
+		<p>pass: 123</p>
+		<!-- noi dung trang--->
+		</div>
+	</div>
+	<div data-role="page" id="Admin">
+		<div data-role="content">
+		<img src="images/logo.png">
+			<a  href="#page" data-role="button"  data-theme="b">Đăng Xuất</a> 
+			<a href="#addMobileAd" data-role="button" data-theme="" style="background-color: #6699FF; color: navy;;">Add Mobile</a>
+			<ul data-role="listview" id="itemsListSV" data-inset="true">
+			<h1>Danh Sách Mobile</h1>
+			
+			</ul>
+		</div>
+	</div>
+	<div data-role="page" id="User">
+		<div data-role="content">
+		User
+		</div>
+	</div>
+	<div data-role="page" id="Dangky">
+		<div data-role="content">
+		<!-- ------ -->
+		<a href="#page" data-role="button" data-theme="b" id="button4">Back</a>
+		<p>Đăng Ký User Mới</p>
+			<input type="text" id="txtDKUsername" placeholder="Username">
+			<input type="text" id="txtDKPassword" placeholder="Password"> 
+			<p>Role</p>
+			<select id="txtDKRole">
+					<option>user</option>
+					<option>admin</option>
+			</select>
+			<button type="button" onclick="dangky()" style="background-color: #3399FF">Đăng Ký</button>
+			<a href="#page" data-role="button" id="button5" style="background-color: #FFCC33">Hủy</a>
+		<!-- ------ -->
+		</div>
+	</div>
+	<div data-role="page" id="XemUserAd">
+	<!-- Tab -->
+	<div id="tab">
+		<a id="tab1" href="#XemSvAd" style="font-weight: bold; text-align: center">Quản Lý Sinh Viên</a>
+		<a id="tab2" href="#XemUserAd" style="font-weight: bold; text-align: center">Quản Lý User</a>
+		</div>
+	<!-- -- -->
+		<div data-role="content">
+		<!-- --Noi Dung -->
+			<a href="#page" data-role="button" id="button1" data-theme="b">Đăng Xuất</a> 
+			<a href="#addUser" data-role="button" id="button3" style="background-color: #6699FF; color: navy">Add User</a>
+			<ul data-role="listview" id="itemsList" data-inset="true">
+			<h1>Danh Sách User</h1>
+			
+			</ul>
+		<!-- - -->
+		</div>
+	</div>
+	<div data-role="page" id="UpdateMobileAd">
+		<div data-role="content">
+			<p>Sửa Thông Tin Mobile</p>
+			<input type="text" id="txtMaSP2" placeholder="Nhập Mã Sản Phẩm">
+			<input id="txtImages2" type=file accept="image/*">
+			<select id="txtidLoai2">
+			<option>Chọn Loại</option>
+					<option>Mới</option>
+					<option>Cũ</option>
+			</select>
+			<input type="text" id="txtTenSP2" placeholder="Nhập Tên Sản Phẩm">
+			<input type="text" id="txtNhaSX2" placeholder="Nhập Tên Nhà Sản Xuất">
+			<input type="text" id="txtGia2" placeholder="Nhập Giá">
+		<a href="#" data-role="button" onclick="SuaXong()" style="background-color: #6699FF; color: navy">Sửa</a>
+		<a href="#Admin" data-role="button" id="button2" style="background-color: #FFCC33; color: maroon">Hủy</a>
+		</div>
+	</div>
+	<div data-role="page" id="XemItem">
+		<div data-role="content">
+		<a  href="#" onclick="back();" data-role="button"  data-theme="a">Quay Lại</a> 
+			<ul data-role="listview" id="itemsListSV" data-inset="true">
+			<div id="tieude" ><p id="demo"></p></div>
+			<ul data-role="listview" id="itemsListUS2" data-inset="true">
+				<h1>Điện Thoại</h1>
+
+			</ul>
+			<div id="GiaTien"></div>
+			</ul>
+		</div>
+	</div>
+	<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>

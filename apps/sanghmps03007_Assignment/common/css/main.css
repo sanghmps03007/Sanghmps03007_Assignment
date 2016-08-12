@@ -1,0 +1,127 @@
+#tab{
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	margin-top: 3px;
+}
+#tab1{
+	width: 49%;
+	height: 35px;
+	border: 1px solid #ffffff;
+	background-color: #EEEEEE;
+	box-shadow: 0px 0px 6px #DDDDDD;
+	font-size:auto;
+	float: left;
+	color: #333333;
+	padding-top: 8px;
+}
+#tab1:hover{
+	width: 49%;
+	height: 35px;
+	border: 1px solid #ffffff;
+	background-color: #EEEEEE;
+	box-shadow: 0px 0px 7px #0066CC;
+	color: #0066FF;
+	font-size:auto;
+	float: left;
+	padding-top: 8px;
+}
+#tab2{
+	margin-left:2px;
+	width: 49%;
+	height: 35px;
+	font-size:auto;
+	border: 1px solid #ffffff;
+	background-color: #EEEEEE;
+	box-shadow: 0px 0px 6px #DDDDDD;
+	float: left;
+	color: #333333;
+	padding-top: 8px;
+}
+#tab2:hover{
+	width: 49%;
+	height: 35px;
+	border: 1px solid #ffffff;
+	background-color: #EEEEEE;
+	box-shadow: 0px 0px 7px #0066CC;
+	color: #0066FF;
+	font-size:auto;
+	float: left;
+	padding-top: 8px;
+}
+a:link {text-decoration: none;}
+
+a:visited {text-decoration: none;}
+
+#itemsListSV{
+	margin-top: 5px;
+}
+
+#itemsListSV li {
+	border-top: 2px solid #666666;
+	min-height: 40px;
+	padding: 0 25px 0 15px;
+	cursor: pointer;
+	color: red;
+	margin-bottom: 4px;
+}
+
+#itemsListSV li .pubDate {
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+
+#itemsListSV li:hover {
+	background-color: #FFF;
+}
+
+#itemsListUS{
+	margin-top: 5px;
+}
+
+#itemsListUS li {
+	border-top: 2px solid #666666;
+	min-height: 40px;
+	padding: 0 25px 0 15px;
+	cursor: pointer;
+	color: red;
+	margin-bottom: 4px;
+}
+
+#itemsListUS li .pubDate {
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+
+#itemsListUS li:hover {
+	background-color: #FFF;
+}
+
+
+#itemsList{
+	margin-top: 5px;
+}
+
+#itemsList li {
+	border-top: 2px solid #666666;
+	min-height: 40px;
+	padding: 0 25px 0 15px;
+	cursor: pointer;
+	color: red;
+	margin-bottom: 4px;
+}
+
+#itemsList li .pubDate {
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+
+#itemsList li:hover {
+	background-color: #FFF;
+}

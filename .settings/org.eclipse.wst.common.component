@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="sanghmps03007_Assignment">
+        <wb-resource deploy-path="/" source-path="/apps/sanghmps03007_Assignment/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/sanghmps03007_Assignment/android"/>
+        <property name="context-root" value="sanghmps03007_Assignment"/>
+    </wb-module>
+</project-modules>
